@@ -1,0 +1,341 @@
+{
+  "knowledge_version": "1.0",
+  "description": "Structured environmental relationships and evidence-oriented rules for biodiversity intelligence.",
+  "rules": [
+    {
+      "id": "soil_001",
+      "category": "soil_health",
+      "condition": {
+        "metric": "soil_organic_carbon",
+        "status": "low"
+      },
+      "relationships": [
+        {
+          "from": "soil_organic_carbon",
+          "to": "soil_health",
+          "relationship": "lower soil organic carbon can indicate poorer soil condition"
+        },
+        {
+          "from": "soil_organic_carbon",
+          "to": "soil_moisture",
+          "relationship": "soil organic matter contributes to soil water retention"
+        },
+        {
+          "from": "soil_health",
+          "to": "biodiversity",
+          "relationship": "soil condition influences habitat quality and organisms dependent on soil"
+        }
+      ],
+      "recommended_actions": [
+        "Use cover crops",
+        "Increase crop diversity through crop rotation",
+        "Consider appropriate organic amendments",
+        "Reduce unnecessary soil disturbance"
+      ],
+      "affected_metrics": [
+        "soil_organic_carbon",
+        "soil_moisture",
+        "soil_health",
+        "habitat_quality",
+        "biodiversity"
+      ],
+      "time_horizon": "medium_term"
+    },
+    {
+      "id": "soil_002",
+      "category": "soil_health",
+      "condition": {
+        "metric": "soil_moisture",
+        "status": "low"
+      },
+      "relationships": [
+        {
+          "from": "soil_moisture",
+          "to": "plant_survival",
+          "relationship": "insufficient soil water availability can constrain plant growth and survival"
+        },
+        {
+          "from": "soil_moisture",
+          "to": "biodiversity",
+          "relationship": "water availability influences the suitability of habitats for plants and other organisms"
+        },
+        {
+          "from": "rainfall",
+          "to": "soil_moisture",
+          "relationship": "rainfall is an important source of soil water"
+        }
+      ],
+      "recommended_actions": [
+        "Improve soil water retention",
+        "Maintain vegetation cover",
+        "Use appropriate water conservation practices",
+        "Reduce exposed bare soil"
+      ],
+      "affected_metrics": [
+        "soil_moisture",
+        "plant_survival",
+        "habitat_quality",
+        "biodiversity"
+      ],
+      "time_horizon": "short_to_medium_term"
+    },
+    {
+      "id": "soil_003",
+      "category": "soil_health",
+      "condition": {
+        "metric": "soil_ph",
+        "status": "unsuitable"
+      },
+      "relationships": [
+        {
+          "from": "soil_ph",
+          "to": "plant_growth",
+          "relationship": "soil pH affects nutrient availability and suitability for different plants"
+        },
+        {
+          "from": "soil_ph",
+          "to": "biodiversity",
+          "relationship": "soil chemical conditions influence which plants and soil organisms can thrive"
+        }
+      ],
+      "recommended_actions": [
+        "Measure soil pH before applying amendments",
+        "Select plant species suitable for the existing soil conditions",
+        "Use soil amendments only when supported by soil testing"
+      ],
+      "affected_metrics": [
+        "soil_ph",
+        "plant_growth",
+        "nutrient_availability",
+        "soil_biodiversity"
+      ],
+      "time_horizon": "medium_term"
+    },
+    {
+      "id": "land_001",
+      "category": "land_use",
+      "condition": {
+        "metric": "land_use",
+        "status": "monoculture"
+      },
+      "relationships": [
+        {
+          "from": "monoculture",
+          "to": "habitat_diversity",
+          "relationship": "land dominated by a single crop or habitat type can provide fewer habitat types than a more heterogeneous landscape"
+        },
+        {
+          "from": "habitat_diversity",
+          "to": "species_richness",
+          "relationship": "greater habitat variety can provide niches and resources for a wider range of organisms"
+        }
+      ],
+      "recommended_actions": [
+        "Introduce crop rotation",
+        "Maintain or establish habitat patches",
+        "Use native vegetation where appropriate",
+        "Create field margins or other habitat features where suitable"
+      ],
+      "affected_metrics": [
+        "land_use_diversity",
+        "habitat_diversity",
+        "species_richness",
+        "biodiversity"
+      ],
+      "time_horizon": "medium_to_long_term"
+    },
+    {
+      "id": "land_002",
+      "category": "habitat_fragmentation",
+      "condition": {
+        "metric": "habitat_fragmentation",
+        "status": "high"
+      },
+      "relationships": [
+        {
+          "from": "habitat_fragmentation",
+          "to": "habitat_connectivity",
+          "relationship": "fragmentation can reduce connectivity between habitat patches"
+        },
+        {
+          "from": "habitat_connectivity",
+          "to": "species_movement",
+          "relationship": "connected habitats can support movement between suitable areas"
+        },
+        {
+          "from": "habitat_fragmentation",
+          "to": "biodiversity",
+          "relationship": "fragmentation can alter habitat availability and ecological connectivity"
+        }
+      ],
+      "recommended_actions": [
+        "Protect remaining habitat patches",
+        "Improve ecological connectivity where feasible",
+        "Consider habitat corridors",
+        "Reduce unnecessary conversion of natural habitat"
+      ],
+      "affected_metrics": [
+        "habitat_fragmentation",
+        "habitat_connectivity",
+        "species_movement",
+        "species_richness"
+      ],
+      "time_horizon": "long_term"
+    },
+    {
+      "id": "climate_001",
+      "category": "climate",
+      "condition": {
+        "metric": "temperature",
+        "status": "high"
+      },
+      "relationships": [
+        {
+          "from": "temperature",
+          "to": "water_demand",
+          "relationship": "higher temperatures can increase atmospheric and plant water demand"
+        },
+        {
+          "from": "temperature",
+          "to": "species_survival",
+          "relationship": "species have environmental tolerance ranges and extreme temperatures can create ecological stress"
+        },
+        {
+          "from": "temperature",
+          "to": "soil_moisture",
+          "relationship": "higher evaporative demand can contribute to faster loss of available soil water"
+        }
+      ],
+      "recommended_actions": [
+        "Maintain vegetation cover",
+        "Protect shade-providing vegetation where appropriate",
+        "Improve soil water retention",
+        "Select species appropriate to local climatic conditions"
+      ],
+      "affected_metrics": [
+        "temperature",
+        "water_demand",
+        "soil_moisture",
+        "species_survival"
+      ],
+      "time_horizon": "short_to_long_term"
+    },
+    {
+      "id": "climate_002",
+      "category": "climate",
+      "condition": {
+        "metric": "rainfall",
+        "status": "low"
+      },
+      "relationships": [
+        {
+          "from": "rainfall",
+          "to": "soil_moisture",
+          "relationship": "reduced rainfall can decrease water available to soils and vegetation"
+        },
+        {
+          "from": "soil_moisture",
+          "to": "plant_survival",
+          "relationship": "water availability is important for plant growth and survival"
+        },
+        {
+          "from": "rainfall",
+          "to": "biodiversity",
+          "relationship": "changes in water availability can alter habitat suitability for organisms"
+        }
+      ],
+      "recommended_actions": [
+        "Improve rainwater retention",
+        "Maintain vegetation cover",
+        "Use locally appropriate drought-tolerant species",
+        "Reduce unnecessary water loss"
+      ],
+      "affected_metrics": [
+        "rainfall",
+        "soil_moisture",
+        "plant_survival",
+        "habitat_quality",
+        "biodiversity"
+      ],
+      "time_horizon": "short_to_medium_term"
+    },
+    {
+      "id": "human_001",
+      "category": "human_pressure",
+      "condition": {
+        "metric": "pollution",
+        "status": "high"
+      },
+      "relationships": [
+        {
+          "from": "pollution",
+          "to": "water_quality",
+          "relationship": "pollution can degrade water quality depending on the pollutant and receiving environment"
+        },
+        {
+          "from": "pollution",
+          "to": "species_survival",
+          "relationship": "pollutants can create physiological or ecological stress for organisms"
+        },
+        {
+          "from": "pollution",
+          "to": "biodiversity",
+          "relationship": "pollution can alter habitat conditions and affect biodiversity"
+        }
+      ],
+      "recommended_actions": [
+        "Identify and reduce major pollution sources",
+        "Protect water bodies and drainage pathways",
+        "Monitor relevant water or soil quality indicators",
+        "Maintain vegetated buffer zones where appropriate"
+      ],
+      "affected_metrics": [
+        "pollution",
+        "water_quality",
+        "soil_quality",
+        "species_survival",
+        "biodiversity"
+      ],
+      "time_horizon": "short_to_long_term"
+    },
+    {
+      "id": "human_002",
+      "category": "human_pressure",
+      "condition": {
+        "metric": "deforestation",
+        "status": "high"
+      },
+      "relationships": [
+        {
+          "from": "deforestation",
+          "to": "habitat_loss",
+          "relationship": "removal of forest vegetation can reduce available habitat"
+        },
+        {
+          "from": "habitat_loss",
+          "to": "species_richness",
+          "relationship": "loss of suitable habitat can reduce the resources available to species"
+        },
+        {
+          "from": "deforestation",
+          "to": "soil_health",
+          "relationship": "loss of vegetation can increase exposure of soil to erosion and degradation processes"
+        }
+      ],
+      "recommended_actions": [
+        "Protect remaining natural vegetation",
+        "Restore native vegetation where ecologically appropriate",
+        "Avoid unnecessary clearing of natural habitat",
+        "Improve habitat connectivity"
+      ],
+      "affected_metrics": [
+        "deforestation",
+        "habitat_loss",
+        "species_richness",
+        "soil_health",
+        "habitat_connectivity"
+      ],
+      "time_horizon": "long_term"
+    }
+  ]
+}

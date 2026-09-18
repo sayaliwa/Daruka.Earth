@@ -31,3 +31,7 @@ chroma_db/
 # Secrets
 *.pem
 *.key
+
+# Vector database
+chroma_db/
+knowledge/vector_db/
