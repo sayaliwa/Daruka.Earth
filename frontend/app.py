@@ -21,7 +21,7 @@ st.set_page_config(
 # BACKEND CONFIGURATION
 # =========================================================
 
-BACKEND_URL = "https://bestsellers-scheme-vocabulary-portions.trycloudflare.com"
+BACKEND_URL = "https://involving-kirk-hepatitis-manufacturers.trycloudflare.com"
 
 
 # =========================================================
