@@ -238,11 +238,16 @@ OPENAI_MODEL=gpt-4o
 
 ### 5. Start Backend
 
+```
+The project uses a separate **FastAPI backend** and **Streamlit frontend**. The backend must be started before launching the frontend.
+
+Open a terminal in the project root and run:
+```
 ```bash
-uvicorn app.main:app --reload
+python -m scripts.start_backend
 ```
 
-API available at: `http://127.0.0.1:8000`
+API available at: `"https://involving-kirk-hepatitis-manufacturers.trycloudflare.com`
 
 ### 6. Start Frontend
 
